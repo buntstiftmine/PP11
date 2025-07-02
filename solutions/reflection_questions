@@ -1,24 +1,27 @@
 TASK 1
 
 1. How do you link prev and next pointers correctly using a static array?
-
+In a static array whose size is fixed at compile time and whose memory is allocated once array indices can be used to to simulate pointer behavior and create a doubly linked list. Each node points to both previous and next nodes in the list and the nodes are connected without using dynamic memory.
 
 2. What are advantages and limitations of compile-time vs. dynamic allocation?
-
+advantages: performance (speed, safety)
+limitations: less flexibility
 
 3. How would you extend this static list to include additional data fields?
+I'm not sure yet.
 
 
 TASK 2
 
 1. Why is malloc necessary when adding nodes dynamically?
+malloc (memory allocation) is used to allocate memory at runtime which is necessary when adding a node to a linked list dynamically. In that case you dont know in advance how many nodes will be needed. Thats why malloc reserves a block of memory of a speyific size from the heap returns a pointer to the beginning of that block and allows you to use this space for storing the node.
 
 
 2. How can you traverse the list to print each node’s address and value?
-
+pointer variables
 
 3. What are the consequences of not freeing the list before exit?
-
+The memory allocated by malloc stays reserved. Possible concequences include memory loss, debugging issues or potentisl resource leaks. It is considered poor programming practice because especially in systems with limited memory it important to manage the memory responsibly and safely (good memory hygiene).
 
 TASK 3
 
